@@ -1,0 +1,46 @@
+C:\Users\Christopher\eclipse-workspace\CS340_Projects\Prj4>g++ -o CValerio_mem.exe CValerio_mem.cpp
+C:\Users\Christopher\eclipse-workspace\CS340_Projects\Prj4>CValerio_mem.exe 1048576
+
+Please Enter a Valid RQ, RL, STAT, C, or QUIT Command:RQ P0 262144
+Please Enter a Valid RQ, RL, STAT, C, or QUIT Command:RQ P1 262144
+Please Enter a Valid RQ, RL, STAT, C, or QUIT Command:RQ P2 262200
+Please Enter a Valid RQ, RL, STAT, C, or QUIT Command:STAT
+
+Addresses [0 : 262143] P0
+Addresses [262144 : 524287] P1
+Addresses [524288 : 786487] P2
+Addresses [786488 : 1048575] Free
+
+Please Enter a Valid RQ, RL, STAT, C, or QUIT Command:RL P1
+P1 has been released from memory
+Please Enter a Valid RQ, RL, STAT, C, or QUIT Command:RQ P3 200000
+Please Enter a Valid RQ, RL, STAT, C, or QUIT Command:STAT
+
+Addresses [0 : 262143] P0
+Addresses [262144 : 462143] P3
+Addresses [462144 : 524287] Free
+Addresses [524288 : 786487] P2
+Addresses [786488 : 1048575] Free
+
+Please Enter a Valid RQ, RL, STAT, C, or QUIT Command:RQ P4 200000
+Please Enter a Valid RQ, RL, STAT, C, or QUIT Command:STAT
+
+Addresses [0 : 262143] P0
+Addresses [262144 : 462143] P3
+Addresses [462144 : 524287] Free
+Addresses [524288 : 786487] P2
+Addresses [786488 : 986487] P4
+Addresses [986488 : 1048575] Free
+
+Please Enter a Valid RQ, RL, STAT, C, or QUIT Command:C
+Memory Compacted
+Please Enter a Valid RQ, RL, STAT, C, or QUIT Command:STAT
+
+Addresses [0 : 262143] P0
+Addresses [262144 : 524343] P2
+Addresses [524344 : 724343] P3
+Addresses [724344 : 924343] P4
+Addresses [924344 : 1048575] Free
+
+Please Enter a Valid RQ, RL, STAT, C, or QUIT Command:QUIT
+QUIT
