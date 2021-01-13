@@ -1,0 +1,31 @@
+Christopher Valerio
+
+To Compile: g++ -o CValerio_mem.exe CValerio_mem.cpp
+To Execute: CValerio_mem.exe 1048576
+
+My Program uses two global list variables called freeList, and usedList.
+-freeList is used to maintain a list of free/unoccupied memory blocks
+-usedList is used to maintain a list of used/occupied memory blocks
+
+-I declare a class called  memBlock. Each memBlock object contains 
+starting index, ending index, size, and status of a memory blocks
+
+-I declare the following functions to support the RQ, RL, C, STAT commands
+	
+	void RQ(string proc, string length);
+		RQ - (request for new process)
+		
+	void RL(string proc);
+		RL - releases/terminates the specified process, clearing it out from memory
+	
+	void STAT();
+		STAT - generate output about how memory is being used
+		
+	void C(int maxSize);
+		C -  compaction command, here we push all processes down towards low memory so they are all flush against each other
+		Leaving all free memory on top of the process blocks
+
+RQ, RL, C, STAT, and QUIT commands must be specified in capital letters. 
+for example an RQ command of "rq P0 262144 W", would not be recognized because "rq" must be specified as "RQ"
+		
+-Initially the project has one large free available block of memory
